@@ -6,7 +6,7 @@ import javax.swing.UIManager.LookAndFeelInfo;
 public class Main {
 	
 	public static void main(String args[]){
-		//coment wand
+		//coment wand2
 		//aqui um comentario novo
 		try {
 		    for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
