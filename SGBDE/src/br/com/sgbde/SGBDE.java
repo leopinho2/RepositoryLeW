@@ -82,7 +82,6 @@ public class SGBDE {
         TitledBorder bordaDados = BorderFactory.createTitledBorder("Dados");    	
 		
 		labelPessoa = new JLabel("Pessoa:     ");
-		comboPessoa = new JComboBox(RicardoUtils.preencheCombo().toArray());
 		comboPessoa.setBackground(Color.CYAN);
 		
 		labelDataInicio = new JLabel("Data Início:");
@@ -382,7 +381,6 @@ public class SGBDE {
 		String sql = "select data,tempo from dbe_vez where paciente_id = " + id + 
 						" order by data asc;";
 		ArrayList<BeanDataTempo> dataTempo = new ArrayList<BeanDataTempo>();				
-		int[] vezes = null;		
 		
 		try {			
 			ResultSet r = s.executeQuery(sql);
@@ -396,24 +394,6 @@ public class SGBDE {
 			e.printStackTrace();
 		}		
 		
-		ArrayList<BeanDataTempo> valores = new ArrayList<BeanDataTempo>();
-		String dataAtual = "";
-		boolean mesmaData = true;
-		int total = 0;
-		for (BeanDataTempo bean : dataTempo) {
-			if(dataAtual.equals("") || bean.getData().equals(dataAtual)){
-				total
-				
-				mesmaData = true;
-			}			
-		}
-		
-		
-		int i = 0;
-		for (String string : datas) {
-			dataset.addValue(vezes[i], "presunto", "Tempo" + i);
-			i++;
-		}
 		return dataset; 
 	}
 	
